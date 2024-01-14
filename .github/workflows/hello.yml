@@ -1,0 +1,13 @@
+name: hola mi primer workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_word:
+    runs-on: ubunto-18.04
+    steps:
+      - name: Echo the message
+        run: echo "Hola Cristian"
