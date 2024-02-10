@@ -3,9 +3,23 @@ import Layout from "../layouts/Layout.astro"
 import Badge from "../components/Badge.astro"
 import SectionContainer from "../components/SectionContainer.astro"
 import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import NodeJsIcon from "../components/icons/Node.astro"
 import SocialPill from "../components/SocialPill.astro"
 import GitHubIcon from "../components/icons/GitHub.astro"
+import GitHub2Icon from "../components/icons/GitHub2.astro"
+import ExpressIcon from "../components/icons/Express.astro"
+import GraphqlIcon from "../components/icons/Graphql.astro"
+import PostgresqlIcon from "../components/icons/Postgresql .astro"
+import MongodbIcon from "../components/icons/Mongodb.astro"
+import ReactIcon from "../components/icons/React.astro"
+import TypeScripIcon from "../components/icons/TypeScrip.astro"
+import JestIcon from "../components/icons/Jest .astro"
+import CypressIcon from "../components/icons/Cypress .astro"
+import NestjsIcon from "../components/icons/Nestjs.astro"
+import SequelizeIcon from "../components/icons/Sequelize.astro"
 import MailIcon from "../components/icons/Mail.astro"
+import JavaScript from "../components/icons/JavaScript.astro"
+import Aws from "../components/icons/Aws.astro"
 import Experience from "../components/Experience.astro"
 import Briefcase from "../components/icons/Briefcase.astro"
 import CodeIcon from "../components/icons/Code.astro"
@@ -14,19 +28,19 @@ import Projects from "../components/Projects.astro"
 
 <Layout
   title="Porfolio de cristian Correa - Desarrollador y Programador Web con +2 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Backend. Especializado en crear aplicaciones únicas."
+  description="Contrata a Cristian Correa."
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
+    <SectionContainer id="sobre-mi" class="py-44 pb-32">
       <img
         class="rounded-full size-12 mb-4"
-        src="/midudev.webp"
+        src="/cristian.jpeg"
         alt="midudev photo"
       />
       <h1
         class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hey, soy midudev <a
+        Hey, soy Cristian Correa<a
           href="https://linkedin.com/in/midudev"
           target="_blank"
           rel="noopener"
@@ -38,23 +52,19 @@ import Projects from "../components/Projects.astro"
       <h2
         class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
       >
-        <span>+2 años de experiencia.</span><span
-          class="text-yellow-800 dark:text-yellow-200"
-        >
-          Desarrollador Backend</span
-        >
-         .<span class="text-red-800 dark:text-red-200">
-          De Barranquilla, Colombia</span
-        >.
-        <span class="text-sky-800 dark:text-sky-200"
-          >Especializado en crear aplicaciones únicas.</span
-        >
+        <span>+2.0 Años de experiencia como</span>
+        <span class="text-yellow-800 dark:text-yellow-200">Desarrollador Backend Node.Js</span>
+        <span class="text-red-800 dark:text-red-200"> De Barranquilla, Colombia,</span>
+        <span>con fuertes conocimientos en diversas tecnologías y Frameworks.</span>
+        <span class="text-yellow-800 dark:text-yellow-200" >
+        <span class="text-sky-800 dark:text-sky-200" >Especializado en crear aplicaciones únicas.</span>
+        <span class="text-black"> Me enorgullece mi capacidad para escribir código limpio en la creación de api y trabajar en equipo con otros desarrolladores..</span>
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/cristian-andres-correa-alvarez-30034820a/">
           <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
+            LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/cristian-cor">
           <GitHubIcon class="size-4 md:size-6" />
@@ -72,9 +82,35 @@ import Projects from "../components/Projects.astro"
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
         <Briefcase class="size-7" />
-         Experiencia laboral
+          Experiencia laboral
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="tecnologias">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <CodeIcon class="size-7" />
+        Tecnologias
+      </h2>
+      <nav class="flex justify-center space-x-4 ">
+        <NodeJsIcon class="size-4 md:size-6" />
+        <ExpressIcon class="size-4 md:size-6" />
+        <SequelizeIcon class="size-4 md:size-6" />
+        <PostgresqlIcon class="size-4 md:size-6" />
+        <MongodbIcon class="size-4 md:size-6" />
+        <NestjsIcon class="size-4 md:size-6" />
+        <GraphqlIcon class="size-4 md:size-6" />
+        <TypeScripIcon class="size-4 md:size-6" />
+        <ReactIcon class="size-4 md:size-6" />
+        <GitHub2Icon class="size-4 md:size-6" />
+        <CypressIcon class="size-4 md:size-6" />
+        <JestIcon class="size-4 md:size-6" />
+        <JavaScript class="size-4 md:size-6" />
+        <Aws class="size-4 md:size-6" />
+        
+      </nav>
     </SectionContainer>
 
     <SectionContainer id="proyectos">
@@ -82,7 +118,7 @@ import Projects from "../components/Projects.astro"
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
         <CodeIcon class="size-7" />
-         Proyectos
+          Proyectos
       </h2>
       <Projects />
     </SectionContainer>
