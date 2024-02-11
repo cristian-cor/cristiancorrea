@@ -23,6 +23,21 @@ import Experience from "../components/Experience.astro"
 import Briefcase from "../components/icons/Briefcase.astro"
 import CodeIcon from "../components/icons/Code.astro"
 import Projects from "../components/Projects.astro"
+
+const infoSocialMedia = [
+  {
+    social: "LinkedIn",
+    url:"https://www.linkedin.com/in/cristian-andres-correa-alvarez-30034820a/"
+  },
+  {
+    social: "GitHub",
+    url:"https://github.com/cristian-cor"
+  },
+  {
+    social: "19correa99@gmail.com",
+    url:"mailto:19correa99@gmail.com"
+  },
+]
 ---
 
 <Layout
@@ -57,22 +72,19 @@ import Projects from "../components/Projects.astro"
         <span>con fuertes conocimientos en diversas tecnologías y Frameworks.</span>
         <span class="text-yellow-800 dark:text-yellow-200" >
         <span class="text-sky-800 dark:text-sky-200" >Especializado en crear aplicaciones únicas.</span>
-        <span class="text-black"> Me enorgullece mi capacidad para escribir código limpio en la creación de api y trabajar en equipo con otros desarrolladores..</span>
+        <span> Me enorgullece mi capacidad para escribir código limpio en la creación de api y trabajar en equipo con otros desarrolladores..</span>
+
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/cristian-andres-correa-alvarez-30034820a/">
+        {
+          infoSocialMedia.map(it=>(
+          <SocialPill href={it.url}>
           <LinkedInIcon class="size-4 md:size-6" />
-            LinkedIn
+            {it.social}
         </SocialPill>
-        <SocialPill href="https://github.com/cristian-cor">
-          <GitHubIcon class="size-4 md:size-6" />
-           GitHub
-        </SocialPill>
-        <SocialPill href="mailto:19correa99@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-           19correa99@gmail.com
-        </SocialPill>
+          ))
+        }
       </nav>
     </SectionContainer>
 
@@ -87,27 +99,30 @@ import Projects from "../components/Projects.astro"
     </SectionContainer>
 
     <SectionContainer id="tecnologias">
-      <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-      >
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80">
         <CodeIcon class="size-7" />
         Tecnologias
       </h2>
-      <nav class="flex justify-center space-x-4 ">
-        <NodeJsIcon class="size-4 md:size-6" />
-        <ExpressIcon class="size-4 md:size-6" />
-        <SequelizeIcon class="size-4 md:size-6" />
-        <PostgresqlIcon class="size-4 md:size-6" />
-        <MongodbIcon class="size-4 md:size-6" />
-        <NestjsIcon class="size-4 md:size-6" />
-        <GraphqlIcon class="size-4 md:size-6" />
-        <TypeScripIcon class="size-4 md:size-6" />
-        <GitHub2Icon class="size-4 md:size-6" />
-        <CypressIcon class="size-4 md:size-6" />
-        <JestIcon class="size-4 md:size-6" />
-        <JavaScript class="size-4 md:size-6" />
-        <Aws class="size-4 md:size-6" />
-        
+      <nav class=" flex justify-center space-x-4">
+        <div>
+          <div class="flex justify-center">
+            <NodeJsIcon class="size-4 md:size-6" />
+            <ExpressIcon class="size-4 md:size-6" />
+            <SequelizeIcon class="size-4 md:size-6" />
+            <PostgresqlIcon class="size-4 md:size-6" />
+            <MongodbIcon class="size-4 md:size-6" />
+            <NestjsIcon class="size-4 md:size-6" />
+            <GraphqlIcon class="size-4 md:size-6" />
+          </div>
+          <div class="flex justify-center">
+            <TypeScripIcon class="size-4 md:size-6" />
+            <GitHub2Icon class="size-4 md:size-6" />
+            <CypressIcon class="size-4 md:size-6" />
+            <JestIcon class="size-4 md:size-6" />
+            <JavaScript class="size-4 md:size-6" />
+            <Aws class="size-4 md:size-6" />
+          </div>
+        </div>
       </nav>
     </SectionContainer>
 
